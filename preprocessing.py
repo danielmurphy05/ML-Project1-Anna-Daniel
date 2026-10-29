@@ -84,14 +84,7 @@ def find_special_codes(data, columns, isolated_only=True, rel_gap=REL_GAP):
         zero_vals = vals[is_code & hit_zero]
         if len(nan_vals) or len(zero_vals):
             codes[str(name)] = {"nan": nan_vals.tolist(), "zero": zero_vals.tolist()}
-
-    print("Columns with special codes:", len(codes))
-    for name, r in codes.items():
-        print(f"  {name}: NaN {r['nan'][:6]} | zero {r['zero'][:6]}")
-    if rejected:
-        print("Kept as real values (not isolated):")
-        for name, v in rejected.items():
-            print(f"  {name}: {v[:8]}")
+            
     return codes
 
 
