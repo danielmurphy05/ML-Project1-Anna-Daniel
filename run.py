@@ -28,8 +28,8 @@ SUBMISSION_PATH = "sample-submission.csv"
 
 SEED = 42
 LAMBDAS = [0, 1e-5, 1e-4, 1e-3]          # regularization grid
-GAMMAS = [0.1, 0.3, 0.8]                 # step sizes to try
-CHECKPOINTS = [500, 1000, 2000]          # max_iters values to compare
+GAMMAS = [0.1, 0.3, 0.5, 0.8]                 # step sizes to try
+CHECKPOINTS = [500, 1000, 2000, 5000]          # max_iters values to compare
 THRESHOLDS = np.linspace(0.02, 0.9, 177) # candidate decision thresholds
 
 

@@ -1,0 +1,37 @@
+table,setting,f1,accuracy,precision,recall
+methods,Always predict -1,0.0000,0.9117,0.0000,0.0000
+methods,Linear regression (GD),0.4180,0.8544,0.3230,0.5921
+methods,Linear regression (SGD),0.3900,0.8648,0.3242,0.4894
+methods,Least squares,0.4209,0.8639,0.3371,0.5600
+methods,Ridge regression (lambda=1e-06),0.4209,0.8639,0.3371,0.5600
+methods,Logistic regression (final model),0.4255,0.8680,0.3455,0.5538
+methods,Reg. logistic regression (lambda=0.0001),0.4242,0.8659,0.3416,0.5593
+ablation,Full pipeline,0.4255,0.8680,0.3455,0.5538
+ablation,No threshold tuning (p >= 0.5),0.2257,0.9142,0.5544,0.1417
+ablation,No bias term,0.4251,0.8692,0.3474,0.5475
+ablation,No special-code cleaning,0.4204,0.8614,0.3333,0.5693
+ablation,No clipping of outliers,0.4247,0.8650,0.3405,0.5641
+ablation,Keep Id,0.4255,0.8680,0.3455,0.5538
+ablation,Keep _PSU,0.4251,0.8677,0.3449,0.5541
+ablation,Keep DISPCODE,0.4253,0.8680,0.3454,0.5532
+ablation,Keep SEQNO,0.4251,0.8677,0.3449,0.5541
+ablation,Keep IYEAR,0.4241,0.8662,0.3421,0.5579
+ablation,Keep IMONTH,0.4240,0.8661,0.3419,0.5579
+ablation,Keep IDAY,0.4256,0.8680,0.3456,0.5538
+ablation,Keep IDATE,0.4240,0.8661,0.3419,0.5579
+ablation,Keep FMONTH,0.4255,0.8680,0.3455,0.5536
+ablation,Keep CELLFON3,0.4246,0.8662,0.3422,0.5591
+ablation,Keep LANDLINE,0.4255,0.8680,0.3455,0.5538
+ablation,Keep PVTRESD2,0.4255,0.8680,0.3455,0.5538
+ablation,Keep CSTATE,0.4255,0.8680,0.3455,0.5538
+ablation,Keep CTELENUM1,0.4255,0.8680,0.3455,0.5538
+ablation,Keep CTELENUM,0.4255,0.8680,0.3455,0.5538
+ablation,Keep CTELNUM1,0.4255,0.8680,0.3455,0.5538
+ablation,Keep CELLFON2,0.4255,0.8680,0.3455,0.5538
+ablation,Keep PVTRESD1,0.4256,0.8664,0.3431,0.5605
+ablation,Keep _VEGETEX,0.4238,0.8645,0.3394,0.5641
+ablation,Keep _VEGRESP,0.4240,0.8646,0.3395,0.5645
+ablation,Keep _FRTRESP,0.4231,0.8646,0.3392,0.5622
+ablation,Keep _FRUITEX,0.4231,0.8646,0.3392,0.5624
+ablation,Keep CVDINFR4,0.4255,0.8680,0.3455,0.5538
+ablation,Keep CVDCRHD4,0.4255,0.8680,0.3455,0.5538

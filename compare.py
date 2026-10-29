@@ -181,9 +181,16 @@ def ablation(x, columns, y, d_full, w_full):
     prep.CLIP = old_clip
     rows.append(evaluate("No clipping of outliers", fit_final(d), d))
 
-    keep_sex = [c for c in prep.DROP_LIST if c != "SEX"]
-    d = prepare(x, columns, y, drop_list=keep_sex)
-    rows.append(evaluate("Keep SEX feature", fit_final(d), d))
+    
+    # Reinsertion of columns one by one 
+    for col in prep.DROP_LIST:
+        drop_list = [c for c in prep.DROP_LIST if c != col]
+
+        d = prepare(x, columns, y, drop_list=drop_list)
+
+        rows.append(
+            evaluate(f"Keep {col}", fit_final(d), d)
+        )
     return rows
 
 

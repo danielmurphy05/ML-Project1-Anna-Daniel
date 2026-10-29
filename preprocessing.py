@@ -2,8 +2,7 @@ import numpy as np
 
 DROP_LIST = [
     'Id', '_PSU', 'DISPCODE', 'SEQNO', 'IYEAR', 'IMONTH',
-    'IDAY', 'IDATE', 'FMONTH', 'CELLFON3', 'LANDLINE',
-    'SEX', 'PVTRESD2', 'CSTATE', 'CTELENUM1', 'CTELENUM',
+    'IDAY', 'IDATE', 'FMONTH', 'CELLFON3', 'LANDLINE', 'PVTRESD2', 'CSTATE', 'CTELENUM1', 'CTELENUM',
     'CTELNUM1', 'CELLFON2', 'PVTRESD1', '_VEGETEX',
     '_VEGRESP', '_FRTRESP', '_FRUITEX', 'CVDINFR4', 'CVDCRHD4'
 ]  # columns related to phone-survey checks, and columns too informative about the target (CVDINFR4, CVDCRHD4: data leakage)
