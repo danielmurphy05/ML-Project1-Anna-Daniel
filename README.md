@@ -1,4 +1,3 @@
-
 # ML Project 1 – Predicting coronary heart disease (MICHD)
 
 EPFL CS-433 Machine Learning, Project 1. Team: Anna Vandermersch, Daniel Murphy.
@@ -39,7 +38,8 @@ python compare.py   # prints the method comparison and ablation tables, saves co
 ```
 
 `run.py` uses a fixed random seed (42), so it produces exactly the same predictions every time.
-It takes about XX minutes on a laptop, most of it for the hyperparameter search.
+It takes about 17 minutes on a laptop, most of it for the hyperparameter search;
+`compare.py` takes about 12 minutes.
 
 ## Pipeline
 
@@ -47,8 +47,7 @@ It takes about XX minutes on a laptop, most of it for the hyperparameter search.
    (dates, identifiers, phone checks), then decode survey special codes. Values starting
    with 7 or 9 ("don't know" / "refused") become missing, and values starting with 8 or 5
    ("none") become 0, but only when the value is isolated in its column, so real values
-   such as 7 days or an age of 77 are kept. Codes are detected on the training data and
-   applied identically to the test data.
+   such as 7 days or an age of 77 are kept.
 2. **Split**: stratified 60/20/20 train / validation / internal test split (same positive
    rate, about 8.8%, in each part).
 3. **Learned preprocessing** (`fit_preprocessing`, fitted on the training split only, then
